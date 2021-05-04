@@ -9,7 +9,7 @@ A PHP Framework for telegram bot developers.
 
 Why to use?
 -----------
-first is **UserFriendly** because:
+First is **UserFriendly** because:
 
 	1. The High level interactions with telegram API (based on `php-telegram-bot <https://github.com/php-telegram-bot/core>`_)
 	2. The Laravel-like structure (**middlewares**, **models**, **views**, etc.)
