@@ -16,5 +16,4 @@ Table of Contents
 	introduction
 	installation
 	framework/overview
-	framework/components/middleware
-	framework/components/database
+	framework/components/index

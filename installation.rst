@@ -20,26 +20,37 @@ To create a new project use this composer syntax:
 
     $ composer create-project pialechini/atmosphere <your-project-name>
 
-Now, your project should be like this:
-
-::
-
-    <your-project-name>
-    ├── Providers/ 
-        ├── MiddlewareProvider.php
-        ├── ScenarioProvider.php
-        ├── SchemaProvider.php
-    ├── handler.phpq
-    ├── composer.json        
-    ├── config.env
-    ├── assistant
-
-Finally, with the command below, you finish the installation steps
+Then, with the command below, you will finish the installation steps
 
 .. code-block:: console
 
     $ php assistant init
 
+Now, your project should be like this:
+
+::
+
+    <your-project-name>
+        ├── Database/
+            ├── Schemas/
+        ├── Middlewares/
+        ├── Models/
+        ├── Providers/
+            ├── MiddlewareProvider.php
+            ├── ScenarioProvider.php
+            ├── SchemaProvider.php
+        ├── Scenarios/
+            ├── Conditions/
+            ├── SubScenarios/
+        ├── TelegramCommunications/
+            ├── Channels/
+        ├── Tests/
+        ├── Views/
+        ├── Application.php
+        ├── handler.php
+        ├── assistant
+        ├── config.env
+        ├── composer.json        
 
 .. important:: After creating project, we highly recommend to execute the following shell command because if you don't do that, other ``assistant`` commands **won't** **work**
 .. note:: If you lose the project structure at any time, it is possible to use ``init`` again to generate all necessary directories
@@ -47,6 +58,8 @@ Finally, with the command below, you finish the installation steps
 
 Configurations
 --------------
+Configurations can be found in ``config.env``
+
 
 Bot configuration
 ^^^^^^^^^^^^^^^^^
@@ -62,7 +75,7 @@ Database configuration
 ^^^^^^^^^^^^^^^^^^^^^^
 In ``config.env``, there are several keys that define communication with database.
 
-.. important:: Atmosphere uses Laravel Eloquent and because of its features it's available to use PostgreSQL or SQL Server
+.. important:: Atmosphere uses Laravel Eloquent. Thus it's available to use PostgreSQL or SQL Server
 
 
 Mysql configuration
@@ -82,10 +95,8 @@ Mysql configuration
 
 Sqlite configuration
 ~~~~~~~~~~~~~~~~~~~~
+Create ``database.sqlite`` file in ``Database/`` directory
 
 ::
 
     DB_DRIVER = sqlite
-    DB_DATABASE = /absolute/path/to/database.sqlite
-
-
