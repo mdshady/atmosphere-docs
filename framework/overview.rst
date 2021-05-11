@@ -2,30 +2,32 @@ Framework Overview
 ==================
 
 * `What is update? <What is update?_>`_
-* `What will I do with this framework? <What will I do with this framework?_>`_
+* `What is the goal ? what should I do? <What is the goal ? what should I do?_>`_
 * `Incoming update lifecycle <Incoming update lifecycle_>`_
 
 
 What is update?
 ---------------
-``Update`` is an object which Telegram API works with. (`Visit this link <https://core.telegram.org/bots/api#update>`_)
+Update is an object which Telegram API works with (`Visit this link <https://core.telegram.org/bots/api#update>`_).
 
 
-What will I do with this framework?
------------------------------------
-Typically, you should answer this question: What do you exactly do if you
-receive an ``update`` from Telegram? What logic does your application use?
+What is the goal ? what should I do?
+------------------------------------
+Typically, you should answer this question: 
 
-The framework meets all your needs. Thus, suppose an incoming ``update`` and
+    What do you exactly do if you receive an ``update`` from Telegram?
+    What logic does your application use?
+
+Atmosphere meets all your needs. Thus, suppose an incoming ``update`` and
 try to think about your application logic (defining middlewares and scenarios).
 
 
 Incoming update lifecycle
 -------------------------------
-1. In the first step, the framework automatically gets ``updates`` from Telegram, 
-and pass them through middlewares. The middlewares are some classes in your application
-which defines some general conditions on ``updates``. If an incoming update does not match
-with these conditions, middleware in which the condition is violated, terminates the ``update`` 
+1. In the first step, framework automatically gets ``updates`` from Telegram
+and pass them through middlewares. Middlewares are some classes in your application
+which define general conditions on ``updates``. If an incoming update does not match
+with these conditions, middleware in which condition is violated, terminates the ``update``.
 So this incoming ``update`` no longer goes to scenarios. Once all middlewares accepted the 
 incoming ``update``, it will go to the next level.
 
@@ -35,7 +37,7 @@ incoming ``update``, it will go to the next level.
 
 | 
 
-2. In this step, the ``update`` goes to the scenarios. Each scenario has 
+1. In this step, the ``update`` goes to the scenarios. Each scenario has 
 some conditions. If the conditions are right for the ``update``, that scenario and it's children
 (sub scenarios) take future control of ``update``'s lifecycle.
 
