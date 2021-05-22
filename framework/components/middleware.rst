@@ -3,19 +3,19 @@ Middleware
 
 * `Philosophy <Philosophy_>`_
 * `Use cases <Use cases_>`_
-* `Create a new middleware <Create a new middleware_>`_
+* `Creating a new middleware <Creating a new middleware_>`_
 
-  * `Automatic <Automatic_>`_
-  * `Manual <Manual_>`_
+  * `Automatically <Automatically_>`_
+  * `Manually <Manually_>`_
 
 
 Philosophy
 ----------
-Middlewares are one of most common usage feature in this framework. 
-Like Laravel middlewares, with this component you can handle every thing
-you want to process before the ``update`` reaches your application logic.
+Middlewares are one of the most common used features in this framework. 
+Like Laravel middlewares, with help of this component you can handle every thing
+you want to process before an ``update`` reaches your application's logic.
 
-Each middleware has ``allow`` method which accepts an ``update`` instance
+Each middleware has an ``allow`` method which accepts an ``update`` instance
 (automatically injected by framework) and returns a boolean value.
 
 .. note::
@@ -24,7 +24,7 @@ Each middleware has ``allow`` method which accepts an ``update`` instance
 
     * ``true``: update will be passed to next middlewar
   
-    * ``false``: update will be terminated
+    * ``false``: the update will be terminated
 
 
 Look at this fun middleware:
@@ -48,32 +48,32 @@ Look at this fun middleware:
         }
     }
 
-With the code above, the bot only accepts messages which contains
+With the code above, the bot only accepts messages which contain
 the word 'please' !
 
 
 Use cases
 ---------
-* Store every incoming update (in database or file) regardless of which scenario will be apply on
+* Store every upcoming update (in database or file) regardless of which scenario will be applied on
 * Block unwanted updates/messages
 * Report every update to administrator of bot
 * Limit message sending time (ex: servicing at night or from 16:00 to 16:30)
 
 
-Create a new middleware
+Creating a new middleware
 -----------------------
-You have two ways to create a new middleware.
+there are two ways for creating a new middleware.
 
-* `Automatic <Automatic_>`_ (with ``assistant``)
-* `Manual <Manual_>`_
+* `Automatically <Automatically_>`_ (with ``assistant``)
+* `Manually <Manually_>`_
 
-Automatic
+Automatically
 ^^^^^^^^^
 .. code-block:: console
 
     $ php assistant make:middleware <NAME>
 
-or create multiple middlewares at once:
+or creating multiple middlewares at once:
 
 .. code-block:: console
 
@@ -120,12 +120,12 @@ Provider (*Providers/MiddlewareProvider.php*):
     }
 
 
-Manual
+Manually
 ^^^^^^
-Create middleware class manually and register it in 
+Creating a middleware class manually and register it in 
 ``Middlewares/MiddlewareProvider.php``.
 
 
 .. hint:: 
-    We highly recommend to use ``assistant`` because of it's **reliability**,
+    We highly recommend you to use ``assistant`` because of it's **reliability**,
     **speed** and **automation** **in** **class** **registrations**.
