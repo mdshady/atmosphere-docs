@@ -1,7 +1,7 @@
 Installation
 ============
 
-* `Create new project <Create new project_>`_
+* `Creating a new project <Creating a new project_>`_
 * `Configurations <Configurations_>`_
 
   * `Bot configuration <Bot configuration_>`_
@@ -12,9 +12,9 @@ Installation
     * `Sqlite configuration <Sqlite configuration_>`_
 
 
-Create new project
+Creating a new project
 ------------------
-To create a new project use this composer syntax:
+To create a new project use this composer syntax below:
 
 .. code-block:: console
 
@@ -52,8 +52,8 @@ Now, your project should be like this:
         ├── config.env
         ├── composer.json        
 
-.. important:: After creating project, we highly recommend to execute the following shell command because if you don't do that, other ``assistant`` commands **won't** **work**
-.. note:: If you lose the project structure at any time, it is possible to use ``init`` again to generate all necessary directories
+.. important:: After creating a project, we highly recommend you to execute the following shell command because unless you do, other ``assistant`` commands **won't** **work**
+.. note:: If you lose the project structure at any time, it is possible to use ``init`` again to generate all necessary directories.
 
 
 Configurations
@@ -73,9 +73,9 @@ Bot configuration
 
 Database configuration
 ^^^^^^^^^^^^^^^^^^^^^^
-In ``config.env``, there are several keys that define communication with database.
+In ``config.env``, there are several keys that define communication with the database.
 
-.. important:: Atmosphere uses Laravel Eloquent. Thus it's available to use PostgreSQL or SQL Server
+.. important:: Atmosphere uses Laravel Eloquent. Thus it's available to use PostgreSQL or SQL Server.
 
 
 Mysql configuration
@@ -95,7 +95,7 @@ Mysql configuration
 
 Sqlite configuration
 ~~~~~~~~~~~~~~~~~~~~
-Create ``database.sqlite`` file in ``Database/`` directory
+Create a ``database.sqlite`` file in ``Database/`` directory
 
 ::
 
