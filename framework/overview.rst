@@ -8,7 +8,7 @@ Framework Overview
 
 What is update?
 ---------------
-tUpdate is an object which Telegram API works with (`Visit this link <https://core.telegram.org/bots/api#update>`_).
+Update is an object which Telegram API works with (`Visit this link <https://core.telegram.org/bots/api#update>`_).
 
 
 What is the goal ? what should I do?
