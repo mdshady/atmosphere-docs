@@ -26,7 +26,7 @@ incoming update lifecycle
 -------------------------------
 1. In the first step, the framework automatically gets ``updates`` from Telegram
 and passes them through middlewares. the Middlewares are some classes in your application
-which define general conditions on ``updates``. If an upcoming update does not match
+which define general conditions on ``updates``. If an incoming update does not match
 with these conditions, the middleware in which condition is violated terminates the ``update``.
 So this incoming ``update`` no longer goes to scenarios. Once all middlewares accept the 
 upcoming ``update``, it will go to the next level.
